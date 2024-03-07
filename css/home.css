@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: "Oswald", sans-serif;
+    font-weight: 400;
+    height: 100vh;
+    overflow-y: hidden;
+}
+.texto{
+    margin: 20px 0 0 20px;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    z-index: 1;
+}
+.texto a{
+    text-decoration: none;
+}
+.texto a:first-child{
+    background-color: #fff;
+    padding: 15px;
+}
+.texto a:last-child{
+    text-decoration: underline;
+    color: #000;
+}
+.texto h1{
+    color:#ef4135;
+}
+.texto span{
+    color: #0050a4;
+}
+.imagenes{
+    display: flex;
+    height: 100%;
+}
+.imagenes a{
+    width: 33.33%;
+    text-decoration: none;
+    position: relative;
+}
+.imagenes a:nth-child(1){
+    background-image: url("../img/azul.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.imagenes a:nth-child(2){
+    background-image: url("../img/blanco.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.imagenes a:nth-child(3){
+    background-image: url("../img/rojo.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.imagenes p{
+    position: absolute;
+    font-size: 7em;
+    bottom: 7%;
+    right: 5%;
+    color:#0050a4
+}
+.imagenes a:nth-child(2) p{
+    color: #fff;
+}
+.imagenes a:nth-child(3) p{
+    color: #ef4135;
+}
+@media screen and (max-width: 810px){
+    .imagenes{
+        flex-direction: column;
+    }
+    .imagenes a{
+        height: 33.33%;
+        width: 100%;
+    }
+}
+@media screen and (max-width: 360px){
+    .texto a:last-child{
+        display: none;
+    }
+}
